@@ -2,6 +2,8 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
+#include <algorithm>
 
 void godLike()
 {
@@ -116,30 +118,31 @@ int main()
   std::cout << "Welcome to the Rap Tier List. \n Rap Tiers Include - Godlike, Decent, Groups, Underrated, Overrated, Trash \nThis is my opinion, obviously."<< std::endl;
   std::cout << "Enter the Tier you would like to view for a random artist" << std::endl;
   std::cin>>answer;
-if (answer == "Godlike"){
+  std::transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+if (answer == "godlike"){
     godLike();
 }
-else if (answer == "Decent"){
+else if (answer == "decent"){
     decent();
 }
 
-else if (answer == "Groups"){
+else if (answer == "groups"){
     rapGroups();
 }
 
-else if (answer == "Underrated"){
+else if (answer == "underrated"){
     underrated();
 }
 
-else if (answer == "Overrated"){
+else if (answer == "overrated"){
     overrated();
 }
 
-else if (answer == "Trash"){
+else if (answer == "trash"){
     trash();
 }
     std::string albumAnswer;
-if (answer == "Trash" or answer == "Overrated"){
+if (answer == "trash" or answer == "overrated"){
     std::cout<<"They don't have a good album xd"<<std::endl;
 }
 else {
