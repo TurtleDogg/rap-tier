@@ -8,6 +8,7 @@
 void godLike()
 {
     std::string godLikeArray[6];
+    std::string artistOutput;
     godLikeArray[0] = "Tyler,The Creator";
     godLikeArray[1] = "MF DOOM";
     godLikeArray[2] = "Eminem"; 
@@ -16,12 +17,14 @@ void godLike()
     godLikeArray[5] = "Earl Sweatshirt";
     srand(time(NULL));
     int numberRandom = std::rand() % 6;
-    std::cout<<godLikeArray[numberRandom]<<std::endl;
+    artistOutput = godLikeArray[numberRandom];
+    std::cout<<artistOutput<<std::endl;
 }
 
 void decent()
 {
     std::string decentArray[11];
+    std::string artistOutput;
     decentArray[0] = "Logic";
     decentArray[1] = "Denzel Curry";
     decentArray[2] = "ScHoolboy Q"; 
@@ -35,12 +38,14 @@ void decent()
     decentArray[10] = "Death Grips";
     srand(time(NULL));
     int numberRandom = std::rand() % 11;
-    std::cout<<decentArray[numberRandom]<<std::endl;
+    artistOutput = decentArray[numberRandom];
+    std::cout<<artistOutput<<std::endl;
 }
 
 void rapGroups()
 {
     std::string rapGroupsArray[10];
+    std::string artistOutput;
     rapGroupsArray[0] = "CZARFACE";
     rapGroupsArray[1] = "Injury Reserve";
     rapGroupsArray[2] = "EARTHGANG"; 
@@ -53,25 +58,28 @@ void rapGroups()
     rapGroupsArray[9] = "$uicideBoy$";
     srand(time(NULL));
     int numberRandom = std::rand() % 10;
-    std::cout<<rapGroupsArray[numberRandom]<<std::endl;
+    artistOutput = rapGroupsArray[numberRandom];
+    std::cout<<artistOutput<<std::endl;
 }
 void underrated()
 {
     std::string underratedArray[11];
+    std::string artistOutput;
     underratedArray[0] = "Ugly God";
     underratedArray[1] = "YG";
     underratedArray[2] = "Ab-Soul"; 
     underratedArray[3] = "Domo Genesis";
     underratedArray[4] = "Ski Mask the Slumped God";
     underratedArray[5] = "Rich Chigga";
-    underratedArray[6] = "Aminé";
+    underratedArray[6] = "AminÃ©";
     underratedArray[7] = "Wifisfuneral";
     underratedArray[8] = "Bishop Nehru";
     underratedArray[9] = "Alex Wiley";
     underratedArray[10] = "Open Mike Eagle";
     srand(time(NULL));
     int numberRandom = std::rand() % 11;
-    std::cout<<underratedArray[numberRandom]<<std::endl;
+    artistOutput = underratedArray[numberRandom];
+    std::cout<<artistOutput<<std::endl;
 }
 
 void overrated()
@@ -103,7 +111,6 @@ void trash()
     trashArray[5] = "Drake";
     trashArray[6] = "Cardi B";
     trashArray[7] = "Migos";
-    trashArray[8] = "Smokepurpp";
     trashArray[9] = "DJ Khaled";
     srand(time(NULL));
     int numberRandom = std::rand() % 10;
@@ -142,13 +149,16 @@ else if (answer == "trash"){
     trash();
 }
     std::string albumAnswer;
-if (answer == "trash" or answer == "overrated"){
-    std::cout<<"They don't have a good album xd"<<std::endl;
-}
-else {
     std::cout<<"Would you like to know their best album?"<<std::endl;
     std::cin>>albumAnswer;
+    std::transform(albumAnswer.begin(), albumAnswer.end(), albumAnswer.begin(), ::tolower);
+    
+if (albumAnswer == "yes"){
+    if (answer == "trash"){
+    std::cout<<"They don't have a good album xd"<<std::endl;
+    }
+}
 }
 
-}
+
 
