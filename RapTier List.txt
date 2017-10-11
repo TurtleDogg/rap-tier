@@ -5,7 +5,7 @@
 #include <cctype>
 #include <algorithm>
 
-void godLike()
+std::string godLike()
 {
     std::string godLikeArray[6];
     std::string artistOutput;
@@ -18,9 +18,9 @@ void godLike()
     srand(time(NULL));
     int numberRandom = std::rand() % 6;
     artistOutput = godLikeArray[numberRandom];
-    std::cout << artistOutput << std::endl;
+    return artistOutput;
 }
-void decent()
+std::string decent()
 {
     std::string decentArray[11];
     std::string artistOutput;
@@ -38,9 +38,9 @@ void decent()
     srand(time(NULL));
     int numberRandom = std::rand() % 11;
     artistOutput = decentArray[numberRandom];
-    std::cout << artistOutput << std::endl;
+    return artistOutput;
 }
-void rapGroups()
+std::string rapGroups()
 {
     std::string rapGroupsArray[10];
     std::string artistOutput;
@@ -57,9 +57,9 @@ void rapGroups()
     srand(time(NULL));
     int numberRandom = std::rand() % 10;
     artistOutput = rapGroupsArray[numberRandom];
-    std::cout << artistOutput << std::endl;
+    return artistOutput;
 }
-void underrated()
+std::string underrated()
 {
     std::string underratedArray[11];
     std::string artistOutput;
@@ -77,9 +77,9 @@ void underrated()
     srand(time(NULL));
     int numberRandom = std::rand() % 11;
     artistOutput = underratedArray[numberRandom];
-    std::cout << artistOutput << std::endl;
+    return artistOutput;
 }
-void overrated()
+std::string overrated()
 {
     std::string overratedArray[10];
     std::string artistOutput;
@@ -96,9 +96,9 @@ void overrated()
     srand(time(NULL));
     int numberRandom = std::rand() % 10;
     artistOutput = overratedArray[numberRandom];
-    std::cout << artistOutput << std::endl;
+    return artistOutput;
 }
-void trash()
+std::string trash()
 {
     std::string trashArray[10];
     std::string artistOutput;
@@ -114,9 +114,9 @@ void trash()
     srand(time(NULL));
     int numberRandom = std::rand() % 10;
     artistOutput = trashArray[numberRandom];
-    std::cout << artistOutput << std::endl;
+    return artistOutput;
 }
-void albumDecision()
+void albumDecision(std::string artistOutput)
 {
     if (artistOutput == "Tyler the Creator")
     {
@@ -147,50 +147,49 @@ int main()
 {
     std::string answer;
     std::string artistOutput;
-    std::cout << "Welcome to the Rap Tier List. \n Rap Tiers Include -Godlike, Decent, Groups, Underrated, Overrated, Trash \nThis is my opinion, obviously."
-    << std::endl;
+    std::cout << "Welcome to the Rap Tier List. \n Rap Tiers Include -Godlike, Decent, Groups, Underrated, Overrated, Trash \nThis is my opinion, obviously."<< std::endl;
     std::cout << "Enter the Tier you would like to view for a random artist" << std::endl;
     std::cin >> answer;
     std::transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
     if (answer == "godlike")
     {
-    godLike();
+    artistOutput = godLike();
     }
     else if (answer == "decent")
     {
-    decent();
+    artistOutput = decent();
     }
     else if (answer == "groups")
     {
-    rapGroups();
+    artistOutput = rapGroups();
     }
     else if (answer == "underrated")
     {
-    underrated();
+    artistOutput = underrated();
     }
     else if (answer == "overrated")
     {
-    overrated();
+    artistOutput = overrated();
     }
     else if (answer == "trash")
     {
-    trash();
+    artistOutput = trash();
     }
     std::string albumAnswer;
-    std::cout<<artistOutput +"\n";
+    std::cout<<artistOutput<<std::endl;
     std::cout << "Would you like to know their best album?" << std::endl;
     std::cin >> albumAnswer;
     std::transform(albumAnswer.begin(), albumAnswer.end(), albumAnswer.begin(), ::tolower);
     //End of if loop with random artist
     if (albumAnswer == "yes")
     {
-    if (answer == "trash")
-    {
-    std::cout << "They don't have a good album xd" << std::endl;
-    }
-    }
-    else{
-    albumDecision(artistOutput);
+        if (answer == "trash")
+        {
+        std::cout << "They don't have a good album xd" << std::endl;
+        }
+        else{
+        albumDecision(artistOutput);
+        }
     }
 }
 
