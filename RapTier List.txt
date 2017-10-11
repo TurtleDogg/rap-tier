@@ -188,6 +188,7 @@ int main()
     {
     std::cout << "They don't have a good album xd" << std::endl;
     }
+    }
     else{
     albumDecision(artistOutput);
     }
