@@ -67,7 +67,7 @@ std::string underrated()
     underratedArray[1] = "YG";
     underratedArray[2] = "Ab-Soul";
     underratedArray[3] = "Domo Genesis";
-    underratedArray[4] = "Ski Mask the Slumped God";
+    underratedArray[4] = "Ski Mask the Slump God";
     underratedArray[5] = "Rich Chigga";
     underratedArray[6] = "Aminé";
     underratedArray[7] = "Wifisfuneral";
@@ -224,6 +224,51 @@ void albumDecision(std::string artistOutput)
     {
         std::cout << "Kill Yourself Sagas" << std::endl;
     }
+    else if (artistOutput == "Ugly God") //Underrated
+    {
+        std::cout << "The Booty  Tape" << std::endl;
+    }
+    else if (artistOutput == "YG")
+    {
+        std::cout << "Still Brazy" << std::endl;
+    }
+    else if (artistOutput == "Ab-Soul")
+    {
+        std::cout << "Do what thou wilt." << std::endl;
+    }
+    else if (artistOutput == "Domo Genesis")
+    {
+        std::cout << "Genesis" << std::endl;
+    }
+    else if (artistOutput == "Ski Mask the Slump God")
+    {
+        std::cout << "You Will Regret" << std::endl;
+    }
+    else if (artistOutput == "Rich Chigga")
+    {
+        std::cout << "No full album yet - but Glow Like Dat" << std::endl;
+    }
+    else if (artistOutput == "Aminé")
+    {
+        std::cout << "Good for You" << std::endl;
+    }
+     else if (artistOutput == "Wifisfuneral")
+    {
+        std::cout << "Boy Who Cried Wolf" << std::endl;
+    }
+     else if (artistOutput == "Bishop Nehru")
+    {
+        std::cout << "Nehruvia" << std::endl;
+    }
+     else if (artistOutput == "Alex Wiley")
+    {
+        std::cout << "Village Party" << std::endl;
+    }
+     else if (artistOutput == "Open Mike Eagle")
+    {
+        std::cout << "Brick Body Kids Still Daydream" << std::endl;
+    }
+    
 }
 int main()
 {
