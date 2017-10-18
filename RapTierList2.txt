@@ -268,7 +268,46 @@ void albumDecision(std::string artistOutput)
     {
         std::cout << "Brick Body Kids Still Daydream" << std::endl;
     }
-    
+       else if (artistOutput == "Chance The Rapper")//Overrated
+    {
+        std::cout << "The Coloring Book" << std::endl;
+    }
+       else if (artistOutput == "J Cole")
+    {
+        std::cout << "4 Your Eyez Only" << std::endl;
+    }
+       else if (artistOutput == "Lil Uzi Vert")
+    {
+        std::cout << "LUV is Rage" << std::endl;
+    }
+       else if (artistOutput == "21 Savage")
+    {
+        std::cout << "Issa Album" << std::endl;
+    }
+       else if (artistOutput == "XXXTentacion")
+    {
+        std::cout << "17" << std::endl;
+    }
+       else if (artistOutput == "Future")
+    {
+        std::cout << "Future (Self titled)" << std::endl;
+    }
+       else if (artistOutput == "Stormzy")
+    {
+        std::cout << "Gang signs and prayer" << std::endl;
+    }
+       else if (artistOutput == "Lil B")
+    {
+        std::cout << "Black Ken" << std::endl;
+    }
+       else if (artistOutput == "Lil Yachty")
+    {
+        std::cout << "Lil boat" << std::endl;
+    }
+       else if (artistOutput == "Kyle")
+    {
+        std::cout << "Smyle" << std::endl;
+    }
 }
 int main()
 {
