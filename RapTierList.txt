@@ -357,6 +357,14 @@ int main()
             albumDecision(artistOutput);
         }
     }
+    std::string repeatAnswer;
+    std::cout<<"Do you want another go?"<<std::endl;
+    std::cin>>repeatAnswer;
+    if (repeatAnswer == "Yes"){
+        main();
+    }
+    else{
+    }
 }
 
 
