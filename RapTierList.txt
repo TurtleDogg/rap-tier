@@ -192,6 +192,10 @@ void albumDecision(std::string artistOutput)
     {
         std::cout << "Every Hero Needs a Villain" << std::endl;
     }
+    else if (artistOutput == "Injury Reserve")
+    {
+        std::cout << "Floss" << std::endl;
+    }
     else if (artistOutput == "EARTHGANG")
     {
         std::cout << "Strays with Rabies" << std::endl;
@@ -224,6 +228,8 @@ void albumDecision(std::string artistOutput)
     {
         std::cout << "Kill Yourself Sagas" << std::endl;
     }
+    
+    
     else if (artistOutput == "Ugly God") //Underrated
     {
         std::cout << "The Booty  Tape" << std::endl;
@@ -268,6 +274,8 @@ void albumDecision(std::string artistOutput)
     {
         std::cout << "Brick Body Kids Still Daydream" << std::endl;
     }
+    
+    
        else if (artistOutput == "Chance The Rapper")//Overrated
     {
         std::cout << "The Coloring Book" << std::endl;
@@ -341,6 +349,10 @@ int main()
     {
         artistOutput = trash();
     }
+    else{
+        std::cout << "Try again." <<std::endl;
+        main();
+    }
     std::string albumAnswer;
     std::cout<<artistOutput<<std::endl;
     std::cout << "Would you like to know their best album?" << std::endl;
@@ -360,7 +372,8 @@ int main()
     std::string repeatAnswer;
     std::cout<<"Do you want another go?"<<std::endl;
     std::cin>>repeatAnswer;
-    if (repeatAnswer == "Yes"){
+    std::transform(repeatAnswer.begin(), repeatAnswer.end(), repeatAnswer.begin(), ::tolower);
+    if (repeatAnswer == "yes"){
         main();
     }
     else{
